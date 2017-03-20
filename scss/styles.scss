@@ -78,7 +78,7 @@ body {
   }
 }
 
-nav {
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -133,111 +133,39 @@ nav {
     }
 }
 
-$mobile-menu-padding-x                       : 15px !default;
-$mobile-menu-padding-y                       : 15px !default;
-$mobile-menu-layer-width                     : 40px !default;
-$mobile-menu-layer-height                    : 4px !default;
-$mobile-menu-layer-spacing                   : 6px !default;
-$mobile-menu-layer-color                     : #000 !default;
-$mobile-menu-layer-border-radius             : 4px !default;
-$mobile-menu-hover-opacity                   : 0.7 !default;
-$mobile-menu-hover-transition-duration       : 0.15s !default;
-$mobile-menu-hover-transition-timing-function: linear !default;
+#mobile-menu-open {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    color: $base-color;
+    font-size: 1.5em;
+    z-index: 10;
+    padding: 0 7px;
+    border-radius: 4px;
+    background: $background;
+}
 
-#mobile-menu {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  z-index: 10;
-  
-  padding: $mobile-menu-padding-y $mobile-menu-padding-x;
-  display: none;
-  cursor: pointer;
+#mobile-menu-close {
+    display: none;
+    text-align: right;
+    width: 100%;
+    background: $background;
+    font-size: 1.5em;
+    padding-right: 15px;
+    padding-top: 10px;
+    cursor: pointer;
+    color: $base-color;
 
-  transition-property: opacity, filter;
-  transition-duration: $mobile-menu-hover-transition-duration;
-  transition-timing-function: $mobile-menu-hover-transition-timing-function;
-
-  // Normalize (<button>)
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: white;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-
-  &:hover {
-      opacity: $mobile-menu-hover-opacity;
-  }
-
-  &.is-active {
-    #mobile-menu-inner {
-      transform: rotate(765deg);
-      transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-
-      &::before,
-      &::after {
-        transition-delay: 0s;
-      }
-
-      &::before {
-        top: 0;
-        opacity: 0;
-      }
-
-      &::after {
-        bottom: 0;
-        transform: rotate(90deg);
-      }
+    span {
+        font-size: 0.5em;
+        text-transform: uppercase;
     }
-  }
-}
 
-
-#mobile-menu-box {
-  width: $mobile-menu-layer-width;
-  height: $mobile-menu-layer-height * 3 + $mobile-menu-layer-spacing * 2;
-  display: inline-block;
-  position: relative;
-}
-
-#mobile-menu-inner {
-  display: block;
-  top: 50%;
-  margin-top: $mobile-menu-layer-height / -2;
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-
-  &,
-  &::before,
-  &::after {
-    width: $mobile-menu-layer-width;
-    height: $mobile-menu-layer-height;
-    background-color: $mobile-menu-layer-color;
-    border-radius: $mobile-menu-layer-border-radius;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0s;
-    transition-delay: 0.1s;
-    transition-timing-function: linear;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-  }
-
-  &::before {
-    top: ($mobile-menu-layer-spacing + $mobile-menu-layer-height) * -1;
-    transition-property: top, opacity;
-  }
-
-  &::after {
-    bottom: ($mobile-menu-layer-spacing + $mobile-menu-layer-height) * -1;
-    transition-property: bottom, transform;
-  }
+    i {
+        vertical-align: middle;
+    }
 }
 
 footer {
@@ -835,7 +763,7 @@ footer {
 // Small Devices
 @media only screen and (max-width : 768px) {
 
-    nav {
+    header {
         position: fixed;
         display: none;
         z-index: 999;
@@ -844,9 +772,8 @@ footer {
         height: 100%;
     }
 
-    #mobile-menu {
-        display: inline-block;
-        z-index: 1000;
+    #mobile-menu-open, #mobile-menu-close {
+        display: block;
     }
 
     #menu {
