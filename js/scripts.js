@@ -10,7 +10,7 @@
 (function($) {
 
     // Animate to section when nav is clicked
-    $('header a').click(function(e) {
+    $('nav a').click(function(e) {
         e.preventDefault();
         var heading = $(this).attr('href');
         var scrollDistance = $(heading).offset().top;
@@ -20,8 +20,9 @@
         }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
 
         // Hide the menu once clicked if mobile
-        if ($('header').hasClass('active')) {
-            $('header, body').removeClass('active');
+        if ($('nav').hasClass('active')) {
+            $('nav, body').removeClass('active');
+            $('#mobile-menu').removeClass('is-active');
         }
     });
 
@@ -67,13 +68,9 @@
     });
 
     // Open mobile menu
-    $('#mobile-menu-open').click(function() {
-        $('header, body').addClass('active');
-    });
-
-    // Close mobile menu
-    $('#mobile-menu-close').click(function() {
-        $('header, body').removeClass('active');
+    $('#mobile-menu').click(function() {
+        $(this).addClass('is-active');
+        $('nav, body').addClass('active');
     });
 
 })(jQuery);
