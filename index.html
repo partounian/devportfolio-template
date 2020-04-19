@@ -6,237 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Patrick's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
+<body style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+font-family: 'Lato', sans-serif; padding: 35vh 0;">
+    <header style="text-align: center">
+        <h1>Patrick Artounian</h1>
     </header>
-    <!-- End header -->
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Patrick Artounian</h1>
-            <h2>Software Engineer</h2>
-            <!-- <a href="#" class="btn-rounded-white">Download Resume</a> -->
+    <main style="margin: 2rem auto; text-align: center; justify-content: center; display: flex">
+        <div style="display: flex; flex-direction: column">
+            <a href="https://www.linkedin.com/in/partounian/" style="font-size: 1.25rem">LinkedIn</a>
+            <span style="font-weight:300">where it's business</span>
         </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
+        <div style="margin-left: 2rem; display: flex; flex-direction: column">
+            <a href="https://twitter.com/partounian" style="font-size: 1.25rem">Twitter</a>
+            <span style="font-weight:300">where it's real<span>
         </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                       My passion in life is to get things done right. I'm addicted to learning and applying knowledge. My specialty is optimization, making sure a server stack is cost-efficient, fast, scalable and secure. 
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End #about -->
-
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            
-            <div data-date="July 2017 – Present">
-                <h3><a href="http://www.embodied.me/">Embodied</a></h3>
-                <h4>Software Engineer</h4>
-                <ul>
-                  <li> DevOps</li>
-                  <li> Web Development</li>
-                  <li> Toolchain Development</li>
-                </ul>
-            </div>
-            
-            <div data-date="July 2017 – Present">
-                <h3><a href="https://www.unity.travel/">Unity Travel</a></h3>
-                <h4>Head of Engineering</h4>
-                <ul>
-                  <li> Managing marketing WP site, shopping Rails site</li>
-                  <li> Interal processs management</li>
-                  <li> Working with the team to make sure festivals are run smoothly</li>
-                </ul>
-            </div>
-            
-            <div data-date="May 2017 – Present">
-                <h3>Freelance</h3>
-                <h4>Software Developer / Consultant</h4>
-                <ul>
-                  <li> Full-Stack LEMP Performance Optimization</li>
-                  <li> WordPress Developer/System Admin</li>
-                  <li> Misc system admin work</li>
-                </ul>
-            </div>
-            
-            <div data-date="June 2015 – May 2017">
-                <h3><a href="https://www.printfirm.com/">PrintFirm</a></h3>
-                <h4>Project Manager / Tech Lead</h4>
-                <ul>
-                  <li> Full-stack management of web servers</li>
-                  <li> Management and hiring of software developers</li>
-                  <li> Created docker containers for modern workflows</li>
-                </ul>
-            </div>
-
-            <div data-date="June 2014 – June 2015">
-                <h3><a href="https://www.printfirm.com/">PrintFirm</a></h3>
-                <h4>Assistant Manager</h4>
-                <ul>
-                    <li> Consultant for every major decision made</li>
-                    <li> Improve tech in-house</li>
-                    <li> Improve company workflow for every departmant</li>
-                </ul>
-            </div>
-            
-            <div data-date="Middle School – Present">
-                <h3>Freelancer</h3>
-                <ul>
-                  <li> Custom Android OS Development / Device Rooting</li>
-                  <li> Migrated various companies to various Cloud solutions</li>
-                  <ul>
-                    <li> G Suite (previously Google Apps), Office 365</li>
-                    <li> Digital Ocean, Linode, AWS</li>
-                  </ul>
-                </ul>
-            </div>
-       </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="projects">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/printfirm-redesign.png" alt="PrintFirm Redesign" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>PrintFirm Redesign &amp; Infrastructure Revamp</h3>
-                        <p>
-                          I managed PrintFirm's overall redesign, while personally working on upgrading our outdated LAMP server stack to a new LEMP stack which I keep constantly monitored with various services. I have also implemented a secondary staging website for dev work and infrastructure update testing before pushing to our production servers.
-                        </p>
-                        <a href="https://www.printfirm.com/">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="skills">
-        <h2 class="heading">Main Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>Linux System Admin</li>
-            <li>Ansible</li>
-            <li>Automated Testing</li>
-            <li>Jenkins</li>
-            <li>Docker</li>
-            <li>PHP</li>
-            <li>WordPress/<a href="https://github.com/roots/trellis">Trellis</a> stack</li>
-            <li>MySQL/MariaDB</li>
-        </ul>
-        <h2 class="heading">Some Experience With</h2>
-        <ul>
-            <li>AWS</li>
-            <li>Ruby (Rails)</li>
-            <li>C#</li>
-            <li>Scala</li>
-            <li>Go</li>
-            <li>Java</li>
-            <li>Selenium</li>
-            <li>Postgres</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/partounian@gmail.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2018 Patrick Artounian 
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/partounian"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    </main>
 </body>
+
 
 </html>
